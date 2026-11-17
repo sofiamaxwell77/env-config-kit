@@ -1,0 +1,17 @@
+{
+  "name": "env-config-kit",
+  "version": "0.1.0",
+  "description": "Read environment variables into typed configuration values without third-party dependencies.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
