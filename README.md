@@ -54,3 +54,10 @@ An empty string is not the same as an absent variable. `APP_PORT=''` with `type:
 throws, because an empty string is a value the operator explicitly set and it cannot be parsed
 as a number. If you want an empty string to mean "unset", give the spec a default and do not set
 the variable at all.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
